@@ -9,7 +9,6 @@ public class ChangeMaker {
 		System.out.println("How much change do you have? (1 to 99)");
 		int changeAmount = input.nextInt();
 		findCoins(changeAmount);
-
 	}
 	
 	public static void findCoins(int amount) {
@@ -39,7 +38,5 @@ public class ChangeMaker {
 		System.out.println("Dimes: " + d);
 		System.out.println("Nickels: " + n);
 		System.out.println("Pennies: " + p);
-
-	}
-	
+	}	
 }
