@@ -9,11 +9,10 @@ public class ChangeMaker {
 		System.out.println("How much change do you have? (1 to 99)");
 		int changeAmount = input.nextInt();
 		findCoins(changeAmount);
-
 	}
 	
-	public static void findCoins(int amount) { //76
-		// Determine how quarters, dimes, nickels, pennies
+	public static void findCoins(int amount) {
+		// Values of: quarters, dimes, nickels, pennies
 		double quarters = 25;
 		double dimes = 10;
 		double nickels = 5;
@@ -21,17 +20,17 @@ public class ChangeMaker {
 		
 		double newAmount = 0;
 		
+		// Determine how many of each coin
 		// count quarters
-		int q = amount / (int)quarters; // returns 3
-		//System.out.println(q); 
-		newAmount = (double)amount - (quarters * q); // returns 12
+		int q = amount / (int)quarters;
+		newAmount = (double)amount - (quarters * q);
 		// count dimes
-		int d = (int)(newAmount / dimes); //returns 1
+		int d = (int)(newAmount / dimes); 
 		newAmount = newAmount - (dimes * d);
 		// count nickels
 		int n = (int)(newAmount / nickels);
 		newAmount = newAmount - (nickels * n);
-		// count nickels
+		// count pennies
 		int p = (int)(newAmount / pennies);
 		
 		System.out.println("Here is your change: ");
@@ -39,7 +38,5 @@ public class ChangeMaker {
 		System.out.println("Dimes: " + d);
 		System.out.println("Nickels: " + n);
 		System.out.println("Pennies: " + p);
-
-	}
-	
+	}	
 }
